@@ -43,6 +43,7 @@ const spawnAgent = () => {
         console.log(data.toString());
     });
     child.on('exit', onExitHandler);
+    child.on('close', onExitHandler);
     child.stderr.on('data', (data) => {
         console.log(data.toString());
     });
